@@ -1,0 +1,28 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 23
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 23
+    }
+
+    buildToolsVersion '27.0.3'
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+repositories {
+    flatDir {
+        dirs '../libs'
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile(name: 'RobotCore-release', ext: 'aar')
+    compile(name: 'Hardware-release', ext: 'aar')
+    compile(name: 'FtcCommon-release', ext: 'aar')
+}
