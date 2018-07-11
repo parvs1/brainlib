@@ -54,7 +54,7 @@ public class BrainImu
 		double angleError;
 
 		angleError = (targetAngle - getHeading());
-		angleError -= Angle.normalize(angleError);
+		angleError = Angle.normalize(angleError);
 
 		return angleError;
 	}
