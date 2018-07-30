@@ -67,6 +67,11 @@ public class BrainImu
 		zeroPosition = getCurrentAbsoluteHeading();
 	}
 
+	public void setZeroPosition(double angle)
+	{
+		zeroPosition = getCurrentAbsoluteHeading();
+	}
+
 	private double getCurrentAbsoluteHeading()
 	{
 		Orientation angles = imu.getAngularOrientation(AxesReference.INTRINSIC, AxesOrder.ZYX, AngleUnit.DEGREES);
