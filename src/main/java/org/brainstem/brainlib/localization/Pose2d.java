@@ -56,6 +56,6 @@ public class Pose2d
 	@Override
 	public String toString()
 	{
-		return String.format(Locale.ENGLISH, "<%.2f, %.2f, %.2f>", pos.x(), pos.y(), heading);
+		return String.format(Locale.ENGLISH, "<%.2f, %.2f, %.2f> (Degrees: %.2f)", pos.x(), pos.y(), heading, Math.toDegrees(heading));
 	}
 }

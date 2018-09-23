@@ -39,8 +39,8 @@ public class Vector2d
 
 	public Vector2d rotated(double angle)
 	{
-		double newX = x * Math.cos(Math.toRadians(angle)) - y * Math.sin(Math.toRadians(angle));
-		double newY = x * Math.sin(Math.toRadians(angle)) + y * Math.cos(Math.toRadians(angle));
+		double newX = x * Math.cos(angle) - y * Math.sin(angle);
+		double newY = x * Math.sin(angle) + y * Math.cos(angle);
 		return new Vector2d(newX, newY);
 	}
 

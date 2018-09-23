@@ -2,17 +2,18 @@ package org.brainstem.brainlib.localization;
 
 public class Angle
 {
-	public static double normalize(double angle)
-	{
-		angle = angle % 360;
+	public static final double TAU = Math.PI * 2;
 
-		angle = (angle + 360) % 360;
+	public static double normalize(double angle) {
+		angle = angle % TAU;
 
-		if (angle > 180)
-		{
-			angle -= 360;
+		angle = (angle + TAU) % TAU;
+
+		if (angle > Math.PI) {
+			angle -= TAU;
 		}
 
 		return angle;
 	}
+
 }
